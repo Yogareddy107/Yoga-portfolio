@@ -1,0 +1,329 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    background: wheat;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color:black;
+    text-decoration:none;
+    font-size: 20px;
+    transition: color 0.3s;
+    font-style: inherit;
+
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: large 45px;
+    margin-bottom:10px ;
+    text-decoration: solid;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cta {
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: #e67e22;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background: url('data:image/jpeg;base64,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')no-repeat center center/cover;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Contact Section */
+
+.contact {
+    padding: 327px 0px;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+}
+
+.contact-info a:hover {
+    color: #e67e22;
+}
+
+
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Contact Section */
+.contact {
+    padding: 327px 0px;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Left Corner Contact Icons */
+.contact-info {
+    position: fixed;
+    top: 60%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    
+}
+
+.contact-info a {
+    color: #92723f;
+    text-decoration: none;
+    font-size: 10px; /* smaller font for icon visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    background-color: wheat;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-info a:hover {
+    background-color: #d8cfc7;
+    transform: scale(1.2); /* Scale effect on hover */
+}
+
+/* Icon Size */
+.contact-info i {
+    font-size: 10px; /* Adjust font size for icon */
+    color:black;
+}
+
+
+
+
+
+
+/* Container to hold the about section and photo  */
+.container {
+    height: 740px;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvJE4ofXDAsQ2cUM2xDkUgP02uMUfEnUtpY65oHx3_EHchaSJAZmzxfPTqMIbb3dIY0iE&usqp=CAU')no-repeat center center/cover ;
+    
+    display: flex;
+    width: 100%;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left side for the about section */
+.about-section {
+    flex: 0;
+    padding: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styling for the heading and paragraph */
+.about-section h2 {
+    margin-top: 100%;
+    
+    font-size: 30px;
+    color: #080808;
+    font-style: calc();
+}
+
+.about-section p {
+    margin-top: 100px;
+
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* Right side for the photo */
+.photo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Styling for the profile photo */
+.profile-photo {
+    max-width: 40%;
+    height: auto;
+    border-radius: 90px 90px 0 90px; /* Rounded edges on the left side */
+    
+}
+

@@ -1,0 +1,60 @@
+/* General styling for the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container to hold the photo and about section */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left side for the photo */
+.photo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8e8e8;
+}
+
+/* Styling for the profile photo */
+.profile-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px; /* Rounded edges on the left side */
+    object-fit: cover;
+}
+
+/* Right side for the about section */
+.about-section {
+    flex: 1;
+    padding: 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styling for the heading and paragraph */
+.about-section h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.about-section p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}

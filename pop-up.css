@@ -1,0 +1,52 @@
+/* Base styling for contact section */
+.contact {
+    position: fixed;
+    right: -250px; /* Hidden initially */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px 0 0 10px;
+    transition: right 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact:hover {
+    right: 0; /* Show popup on hover */
+}
+
+.contact h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-info a i {
+    margin-right: 10px;
+}
+
+/* Icon Styling */
+.contact-info a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .contact {
+        right: -200px;
+        width: 200px;
+    }
+
+    .contact:hover {
+        right: 0;
+    }
+}
